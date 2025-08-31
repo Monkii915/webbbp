@@ -1,0 +1,17 @@
+{
+  "name": "modern-web-app",
+  "version": "1.0.0",
+  "description": "A modern web application utilizing APIs, a MariaDB database, and impressive animations.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mariadb": "^2.5.0",
+    "gsap": "^3.9.1"
+  },
+  "author": "Anthony Javier",
+  "license": "ISC"
+}

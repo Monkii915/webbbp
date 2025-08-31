@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    overflow-x: hidden;
+}
+
+.background-blur {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    filter: blur(16px) brightness(0.7);
+    z-index: -1;
+}
+
+header, footer, #content {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 600px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333;
+    text-align: center;
+}
+
+.glass-btn {
+    background: rgba(255,255,255,0.35);
+    border: none;
+    border-radius: 12px;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    color: #333;
+    box-shadow: 0 4px 16px rgba(31,38,135,0.12);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 1rem;
+}
+.glass-btn:hover {
+    background: rgba(255,255,255,0.55);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease forwards;
+}
+.slide-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUp 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    to { opacity: 1; transform: translateY(0); }
+}
